@@ -1,0 +1,9 @@
+Remote sensing road & drivable area semantic segmentation project.
+
+This repository will contain:
+1.Dataset preparation
+2.UNet baseline model training
+3.Evaluation (IoU / F1)
+4.Visualization of results
+
+This project is created for my MSc application.
