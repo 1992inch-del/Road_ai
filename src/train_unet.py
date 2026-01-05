@@ -35,8 +35,8 @@ def main():
 
     # === 超参数（先用最稳的）===
     epochs = 5 #这个是总轮数，比如第一次进行到5，第二次运行时就会从6开始，直到运行到规定的次数结束
-    batch_size = 2
-    lr = 1e-3
+    batch_size = 2 #每次训练的样本数
+    lr = 1e-3 #学习率
     num_workers = 0  # Windows 先用0，稳定后再改2/4
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -52,7 +52,7 @@ def main():
     val_ds = MassRoadPatchDataset(
         str(data_root),
         split="val",
-        patch_size=512,  #Windows稳定后可以更改为768
+        patch_size=512,  
         use_rgb=True
     )
     train_loader = DataLoader(
