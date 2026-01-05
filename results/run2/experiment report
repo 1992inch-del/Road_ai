@@ -1,0 +1,32 @@
+run_name: run2
+
+task: road_and_drivable_area_segmentation
+model: UNet_baseline
+dataset: Massachusetts_Roads
+training_type: patch_level
+
+training_parameters:
+  epochs: 15
+  batch_size: 2
+  patch_size: 512
+  optimizer: Adam
+  learning_rate: 0.001
+  loss_function: BCEWithLogitsLoss
+
+checkpoint:
+  strategy: save_best_only
+  metric: IoU
+  path: results/run2/best_unet.pth
+
+evaluation_results:
+  num_patches: 49
+  mean_iou: 0.5018
+  mean_dice: 0.6390
+  precision: 0.8336
+  recall: 0.5469
+
+notes:
+  - single_run_experiment
+  - no_data_augmentation
+  - baseline_model
+  - fewer_epochs_than_run1
