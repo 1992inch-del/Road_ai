@@ -4,18 +4,29 @@
 ## Overview
 This project involves the use of remote sensing data to perform semantic segmentation of road and drivable areas. It leverages the U-Net model, a popular deep learning architecture for image segmentation.
 
-## This repository will contain:
+## Dataset
+This project uses the Massachusetts Roads Dataset (Metadata: http://www.cs.toronto.edu/~vmnih/data/), a public benchmark dataset for road extraction from aerial imagery.
+
+1. Image size: 1500 × 1500 pixels
+2. Image type: RGB aerial images (TIFF format)
+3. Task: Binary semantic segmentation (road vs. background)
+4. Data split: Train / Validation / Test
+
+The dataset is widely used as a baseline for evaluating road extraction and semantic segmentation models in remote sensing.
+
+
+## This repository contains:
 1. Dataset preparation:
    Instructions on how to acquire or generate the dataset, its structure, and preprocessing steps.
 2. U-Net baseline model training:
-   Code and instructions on how to train the U-Net model using the prepared dataset.
+   Code and instructions on how to train the U-Net model using the prepared dataset. U-Net is selected due to its effectiveness on dense prediction tasks with limited training data, which is common in remote sensing scenarios.
 3. Evaluation:
    Model evaluation metrics using Intersection over Union (IoU), Dice Coefficient (Dice), Precision and Recall.
 4. Visualization of results:
    Visualization tools for showing the results of the model predictions, such as masks overlaid on input images.
 
 ## Project Structure
-1. data/: Contains the dataset used for training, valuing and testing.
+1. data/: Contains the dataset used for training, validation and testing.
 2. results/: Stores model checkpoints, training logs, and output images.
 3. src/: Contains the Python scripts for training, evaluation, and visualization.
 4. README.md: This file.
@@ -71,4 +82,5 @@ To train the U-Net model, follow these steps:
 ## Note:
 1. The training time and results may vary depending on the hardware you are using(My GPU is Nvidia Geforce RTX4060 and my CPU is AMD i5).
 2. Make sure to monitor the training process for any potential issues like overfitting or underfitting.
-3. You are not allowed to change the RUN_NAME when you want to train the model based on the previous epoch. However, if you want to start a new training you have to change the RUN_NAME.
+3. If you want to resume training from a previous checkpoint, keep the same RUN_NAME.
+4. If you want to start a new experiment, please change the RUN_NAME.
