@@ -71,4 +71,4 @@ To train the U-Net model, follow these steps:
 ## Note:
 1. The training time and results may vary depending on the hardware you are using(My GPU is Nvidia Geforce RTX4060 and my CPU is AMD i5).
 2. Make sure to monitor the training process for any potential issues like overfitting or underfitting.
-
+3. You are not allowed to change the RUN_NAME when you want to train the model based on the previous epoch. However, if you want to start a new training you have to change the RUN_NAME.
