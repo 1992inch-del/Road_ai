@@ -9,3 +9,5 @@
 *.ico
 *.webp
 *.svg
+src/__pycache__/dataset_massroad_patch.cpython-39.pyc
+src/__pycache__/unet.cpython-39.pyc

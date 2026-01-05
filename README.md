@@ -42,7 +42,7 @@ The dataset is widely used as a baseline for evaluating road extraction and sema
     
 
 3. Prepare the dataset:
-    Download the dataset from [Dataset Link] and place it in the data/ folder.
+    Download the dataset from [https://drive.google.com/file/d/1AyZ7pTMX8Lx3SWONCgxG5QX_WbG-soOX/view?usp=drive_link] and place it in the data/ folder.
 
 ## Training the Model
 
@@ -52,7 +52,7 @@ To train the U-Net model, follow these steps:
     Install dependencies: [pip install -r requirements.txt](requirements.txt)
 
 2. Prepare the dataset:
-    Download the dataset from [Dataset Link].
+    Download the dataset from [https://drive.google.com/file/d/1AyZ7pTMX8Lx3SWONCgxG5QX_WbG-soOX/view?usp=drive_link].
     Place the dataset into the data/ folder, ensuring the following structure:
       data/
       Massachusetts/
